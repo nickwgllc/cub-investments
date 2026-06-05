@@ -1,88 +1,101 @@
 import Link from "next/link";
 import Image from "next/image";
+import TeamBios from "@/components/TeamBios";
 
 const portfolioActive = [
   {
     name: "The Wright Gardner",
     url: "https://thewrightgardner.com",
-    description: "Commercial landscaping services across the Bay Area.",
+    urlLabel: "TWGPlants.com",
+    description: "Originally acquired in 2017 from retiring owner and founder Matthew Gardner, WG has since expanded its operation through the acquisition and integration of several Northern California horticulture services companies including Nelou's Greenery, the San Francisco Plant Company, SF Greenscapes, Barry Brown & Associates, Bay Plant Company, Peninsula Plant Company, Elite Interiorscapes, and The Plant Fairies. The Wright Gardner provides a full range of horticultural services that make indoor and outdoor environments more vibrant, healthy, and productive.",
     img: "/images/portfolio-wright-gardner.jpg",
     imgW: 472, imgH: 474,
   },
   {
     name: "OnPoint Generators",
     url: "https://www.onpointgen.com",
-    description: "Generator sales, service, and maintenance.",
+    urlLabel: "OnPointGen.com",
+    description: "Founded in 2023, OnPoint Generators, Inc. is a California-based regional acquisition venture designed to acquire and grow sales, service, and rental businesses in the backup power space. OnPoint's promise is to help keep customers Always On!",
     img: "/images/portfolio-onpoint-generators.png",
     imgW: 1102, imgH: 1106,
   },
   {
     name: "Wave2Wave",
-    url: null,
-    description: "Managed IT and network services.",
+    url: "https://wave2wave.io",
+    urlLabel: "Wave2Wave.io",
+    description: "Wave2Wave simplifies data center infrastructure—from design to deployment—by delivering custom-engineered cabling, power, networking, kitting, and DCIM services tailored for enterprise, colocation, HPC, OEMs, and system integrators. The company was acquired from its founder in 2025 and led by Mark Crandon.",
     img: "/images/portfolio-wave2wave.png",
     imgW: 1054, imgH: 609,
   },
   {
     name: "Washington Generators",
-    url: "https://www.washgen.com",
-    description: "Generator services in the Pacific Northwest.",
+    url: "https://www.washingtongenerators.com",
+    urlLabel: "WashGen.com",
+    description: "Washington Generators is a Seattle-based electrical contractor specializing in backup power applications. In 2021, entrepreneur Corey Gilgan acquired WashGen from its founding family with limited partner participation from Cub Investments. Gilgan became CEO and majority owner and is now leading the company's next phase of growth.",
     img: "/images/portfolio-washington-generators.png",
     imgW: 1000, imgH: 630,
   },
   {
     name: "Sabre Pak",
     url: "https://sabrepak.com/",
-    description: "Packaging and fulfillment services.",
+    urlLabel: "Sabrepak.com",
+    description: "Sabrepak supplies customized packaging and labelling products to industrial clients and distributors across Canada. The company was acquired from its founders in the summer of 2023 by small business entrepreneur Oskar Borzyminski to facilitate a retirement transition.",
     img: "/images/portfolio-sabrepak.png",
     imgW: 1125, imgH: 650,
   },
   {
     name: "CraneTech",
-    url: null,
-    description: "Crane inspection and maintenance services.",
+    url: "https://www.cranetechusa.com",
+    urlLabel: "CraneTechUSA.com",
+    description: "CraneTech offers clients field installation, maintenance, repair, and compliance services of overhead cranes and hoists. CraneTech was acquired by the partners at Steel River in 2021 in an entrepreneur-led buyout transaction.",
     img: "/images/portfolio-cranetech.png",
     imgW: 1280, imgH: 807,
   },
   {
     name: "Steel River",
     url: "https://www.steelriver.co/",
-    description: "Industrial coatings and surface preparation.",
+    urlLabel: "SteelRiver.co",
+    description: "Founded by entrepreneurs Austin King and Eric Factor, Steel River is an entrepreneurial venture focused on acquiring, running, and growing US-based family-owned industrial services businesses. The Steel River family of businesses is building the backbone of American Infrastructure.",
     img: "/images/portfolio-steel-river.png",
     imgW: 1280, imgH: 1174,
   },
   {
     name: "New York Security Solutions",
     url: "https://nyss.us/",
-    description: "Security services in the New York metro area.",
-    img: "/images/portfolio-nyss.png",
+    urlLabel: "NYSS.us",
+    description: "NYSS is a leading commercial public safety and security systems integrator and service provider operating in the New York City area. In September 2020, Cub Investments acquired a minority interest equity stake in NYSS as part of an entrepreneurial acquisition led by Earl Gordon.",
+    img: "/images/portfolio-nyss.jpg",
     imgW: 355, imgH: 205,
   },
   {
     name: "J Blanton Plumbing",
-    url: null,
-    description: "Residential and commercial plumbing services.",
+    url: "https://www.jblantonplumbing.com",
+    urlLabel: "JBlantonPlumbing.com",
+    description: "J. Blanton Plumbing is one of the leading residential plumbing companies serving the greater Chicagoland region. In 2022 Cub Investments made a limited partner investment into JBP as part of an entrepreneurial searcher-led succession takeover transaction led by Aizik Zimerman of Ternopil Group.",
     img: "/images/portfolio-j-blanton.png",
     imgW: 915, imgH: 922,
   },
   {
     name: "Avenir Hospitality",
-    url: null,
-    description: "Hospitality management services.",
+    url: "https://avenirhospitality.com",
+    urlLabel: "AvenirHospitality.com",
+    description: "Avenir is a hospitality-focused investment and management group that is elevating the boutique hospitality industry by providing highly unique and differentiated guest-centric experiences.",
     img: "/images/portfolio-avenir.jpg",
     imgW: 200, imgH: 183,
   },
   {
     name: "Prove Partners",
-    url: null,
-    description: "Business services firm.",
+    url: "https://provepartners.com",
+    urlLabel: "ProvePartners.com",
+    description: "Prove Partners is a nationwide leader in lien-based financing for doctors. PP reimburses quality medical care for patients who have been injured as a result of a personal injury accident, including worker's comp cases. In 2019 Cub Investments acquired a minority interest in Med+Care Solutions (re-branded Prove Partners) as part of an entrepreneurial searcher-led buyout transaction.",
     img: "/images/portfolio-prove-partners.png",
     imgW: 1280, imgH: 1179,
   },
   {
     name: "Blue Maple",
-    url: null,
-    description: "Field services company.",
+    url: "https://staybluemaple.com",
+    urlLabel: "StayBlueMaple.com",
+    description: "Blue Maple offers beautifully finished, high-quality cabins available for short term stays in outdoorsy \"get-away\" destinations near major US cities. Cub Investments invested as a limited partner in Blue Maple's second structured fund in 2022 to finance the company's first major scale up of its own-operate short-term rental portfolio. The company is led by serial entrepreneur Tony Cappaert.",
     img: "/images/portfolio-blue-maple.png",
     imgW: 1044, imgH: 958,
   },
@@ -91,7 +104,7 @@ const portfolioActive = [
 const portfolioExited = [
   {
     name: "Vargas Gardening",
-    description: "Landscaping and gardening services.",
+    description: "Landscaping and gardening services. Acquired in 2020, turned around, grown, and successfully exited to private equity in 2022.",
     img: "/images/portfolio-vargas.jpg",
     imgW: 1000, imgH: 910,
   },
@@ -228,75 +241,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-3">The People</p>
           <h2 className="text-4xl font-bold text-gray-900 mb-16">Team</h2>
-          <div className="grid md:grid-cols-2 gap-10">
-            {/* Nick */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <div className="flex items-start gap-5 mb-6">
-                <Image
-                  src="/images/nick-haschka.png"
-                  alt="Nick Haschka"
-                  width={72}
-                  height={72}
-                  className="rounded-full object-cover shrink-0"
-                />
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900">Nick Haschka</h3>
-                  <p className="text-[var(--cub-crimson)] font-medium">Partner</p>
-                </div>
-              </div>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Nick has been acquiring and operating small businesses since 2016. Starting with a single
-                acquisition via SBA loan, he has grown Cub Investments into a portfolio of a dozen
-                field services companies. He is passionate about helping great small businesses reach their
-                next generation of success.
-              </p>
-              <div className="flex gap-4">
-                <a href="https://www.linkedin.com/in/nhaschka" target="_blank" rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-blue-600 transition-colors flex items-center gap-2 text-sm font-medium">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                  LinkedIn
-                </a>
-                <a href="https://twitter.com/NickHaschka" target="_blank" rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-sky-500 transition-colors flex items-center gap-2 text-sm font-medium">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                  Twitter
-                </a>
-              </div>
-            </div>
-
-            {/* Anu */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <div className="flex items-start gap-5 mb-6">
-                <Image
-                  src="/images/anu-sharma.png"
-                  alt="Anupam Sharma"
-                  width={72}
-                  height={72}
-                  className="rounded-full object-cover shrink-0"
-                />
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900">Anupam Sharma</h3>
-                  <p className="text-[var(--cub-crimson)] font-medium">Partner</p>
-                </div>
-              </div>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Anu brings deep operational and strategic expertise to the Cub Investments team. He works
-                closely with portfolio companies to drive growth, improve operations, and help owner-operators
-                reach the next level of their business journey.
-              </p>
-              <a href="https://www.linkedin.com/in/anupamsharma7" target="_blank" rel="noopener noreferrer"
-                className="text-gray-500 hover:text-blue-600 transition-colors flex items-center gap-2 text-sm font-medium w-fit">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-                LinkedIn
-              </a>
-            </div>
-          </div>
+          <TeamBios />
         </div>
       </section>
 
@@ -371,18 +316,14 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="p-5">
-                  <div className="flex items-center justify-between mb-2">
-                    <h4 className="font-bold text-gray-900">{company.name}</h4>
-                    {company.url && (
-                      <a href={company.url} target="_blank" rel="noopener noreferrer"
-                        className="text-[var(--cub-crimson)] hover:text-[var(--cub-crimson-700)]" aria-label={`Visit ${company.name}`}>
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                    )}
-                  </div>
-                  <p className="text-sm text-gray-600">{company.description}</p>
+                  <h4 className="font-bold text-gray-900 mb-1">{company.name}</h4>
+                  {company.url && (
+                    <a href={company.url} target="_blank" rel="noopener noreferrer"
+                      className="text-xs text-[var(--cub-crimson)] hover:text-[var(--cub-crimson-700)] font-medium mb-3 inline-block">
+                      {company.urlLabel}
+                    </a>
+                  )}
+                  <p className="text-sm text-gray-600 leading-relaxed">{company.description}</p>
                 </div>
               </div>
             ))}
