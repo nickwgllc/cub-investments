@@ -204,9 +204,10 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 export default function LibraryPage() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-20">
+    <div className="max-w-5xl mx-auto px-6 py-20">
       {/* Header */}
-      <div className="mb-16">
+      <div className="mb-12">
+        <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-3">Reading List</p>
         <h1 className="text-4xl font-bold text-gray-900 mb-3">Content Library</h1>
         <p className="text-lg text-gray-500">
           The best stuff we&apos;ve produced and found since starting in SMB in 2016.
@@ -214,7 +215,7 @@ export default function LibraryPage() {
       </div>
 
       {/* Nick's content */}
-      <div className="grid md:grid-cols-2 gap-12 mb-20">
+      <div className="grid lg:grid-cols-[2fr_3fr] gap-12 mb-20">
         <div className="space-y-10">
           <Section title="Podcasts">
             <LinkList items={podcasts} />
@@ -286,7 +287,7 @@ export default function LibraryPage() {
         <p className="text-sm text-gray-500">** Those marked with ** are affiliate links which compensate us when used.</p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
         <Section title="Books">
           <LinkList items={recommendedBooks} />
         </Section>

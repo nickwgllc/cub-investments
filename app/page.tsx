@@ -132,11 +132,11 @@ export default function HomePage() {
             src="/images/hero-banner.png"
             alt=""
             fill
-            className="object-cover object-center opacity-15"
+            className="object-cover object-center opacity-40"
             priority
           />
-          {/* gradient overlay: stronger at bottom */}
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-950/60 via-gray-950/40 to-gray-950/80" />
+          {/* gradient overlay: lighter to let the image show */}
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-950/40 via-gray-950/20 to-gray-950/60" />
         </div>
         <div className="relative max-w-6xl mx-auto px-6 py-32 w-full">
           <p className="text-[#e8a0a8] font-semibold text-xs uppercase tracking-[0.2em] mb-5">
@@ -360,14 +360,13 @@ export default function HomePage() {
 
           <div className="space-y-20">
             {/* Retirement Buyout */}
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-              <div className="rounded-2xl overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
                 <Image
                   src="/images/deal-retirement-buyout.jpg"
                   alt="Retirement buyout"
-                  width={1280}
-                  height={922}
-                  className="w-full h-64 object-cover object-top rounded-2xl"
+                  fill
+                  className="object-cover object-top"
                 />
               </div>
               <div>
@@ -401,7 +400,7 @@ export default function HomePage() {
             <hr className="border-gray-100" />
 
             {/* Partnership Buy-In */}
-            <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
                 <p className="text-[var(--cub-crimson)] font-semibold text-sm uppercase tracking-widest mb-2">
                   Situation: Partnership Buy-In
@@ -421,13 +420,12 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
-              <div className="order-1 md:order-2 rounded-2xl overflow-hidden">
+              <div className="order-1 md:order-2 relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
                 <Image
                   src="/images/deal-partnership-buyin.jpg"
                   alt="Partnership buy-in"
-                  width={1280}
-                  height={979}
-                  className="w-full h-64 object-cover object-top rounded-2xl"
+                  fill
+                  className="object-cover object-top"
                 />
               </div>
             </div>
@@ -435,14 +433,13 @@ export default function HomePage() {
             <hr className="border-gray-100" />
 
             {/* LP Investor */}
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-              <div className="rounded-2xl overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
                 <Image
                   src="/images/deal-lp-investor.jpg"
                   alt="LP investor"
-                  width={1280}
-                  height={935}
-                  className="w-full h-64 object-cover object-top rounded-2xl"
+                  fill
+                  className="object-cover object-top"
                 />
               </div>
               <div>
