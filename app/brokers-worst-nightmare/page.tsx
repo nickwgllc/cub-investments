@@ -10,12 +10,12 @@ export default function BrokersWorstNightmarePage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-20">
       <div className="mb-4">
-        <Link href="/library" className="text-amber-600 hover:text-amber-700 text-sm font-semibold">
+        <Link href="/library" className="text-[var(--cub-crimson)] hover:text-[var(--cub-crimson-700)] text-sm font-semibold">
           ← Back to Library
         </Link>
       </div>
 
-      <p className="text-amber-600 font-semibold text-sm uppercase tracking-widest mb-3">
+      <p className="text-[var(--cub-crimson)] font-semibold text-sm uppercase tracking-widest mb-3">
         Article
       </p>
       <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
@@ -154,14 +154,14 @@ export default function BrokersWorstNightmarePage() {
         <div className="grid sm:grid-cols-2 gap-4">
           <Link
             href="/library"
-            className="block p-5 border border-gray-200 rounded-xl hover:border-amber-300 transition-colors"
+            className="block p-5 border border-gray-200 rounded-xl hover:border-[var(--cub-crimson)]300 transition-colors"
           >
             <p className="font-semibold text-gray-900 mb-1">Full Library</p>
             <p className="text-sm text-gray-500">Podcasts, writings &amp; resources going back to 2016</p>
           </Link>
           <Link
             href="/contact"
-            className="block p-5 border border-gray-200 rounded-xl hover:border-amber-300 transition-colors"
+            className="block p-5 border border-gray-200 rounded-xl hover:border-[var(--cub-crimson)]300 transition-colors"
           >
             <p className="font-semibold text-gray-900 mb-1">Get in Touch</p>
             <p className="text-sm text-gray-500">Have a deal or want to connect?</p>

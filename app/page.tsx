@@ -113,7 +113,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-gray-950 text-white min-h-[88vh] flex items-center overflow-hidden">
+      <section className="relative bg-[var(--cub-navy-900)] text-white min-h-[88vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/hero-banner.png"
@@ -126,12 +126,12 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-gray-950/60 via-gray-950/40 to-gray-950/80" />
         </div>
         <div className="relative max-w-6xl mx-auto px-6 py-32 w-full">
-          <p className="text-amber-400 font-semibold text-xs uppercase tracking-[0.2em] mb-5">
+          <p className="text-[#e8a0a8] font-semibold text-xs uppercase tracking-[0.2em] mb-5">
             Cub Investments · Since 2016
           </p>
           <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] mb-6 max-w-3xl">
             Pride of<br />
-            <span className="text-amber-400">Ownership</span>
+            <span className="text-[#e8a0a8]">Ownership</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mb-12 leading-relaxed">
             We acquire and operate small field-services businesses — giving great companies
@@ -140,13 +140,13 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
-              className="bg-amber-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-amber-700 transition-colors text-center shadow-lg shadow-amber-900/30"
+              className="bg-[var(--cub-crimson)] text-white font-semibold px-8 py-4 rounded-lg hover:bg-[var(--cub-crimson-700)] transition-colors text-center shadow-lg shadow-[var(--cub-crimson)]/30"
             >
               Let&apos;s Talk
             </Link>
             <Link
               href="#investment-criteria"
-              className="border border-white/40 text-white font-semibold px-8 py-4 rounded-lg hover:border-amber-400 hover:text-amber-300 transition-colors text-center backdrop-blur-sm"
+              className="border border-white/40 text-white font-semibold px-8 py-4 rounded-lg hover:border-white/60 hover:text-[#e8a0a8] transition-colors text-center backdrop-blur-sm"
             >
               Our Criteria
             </Link>
@@ -172,7 +172,7 @@ export default function HomePage() {
       {/* Investment Criteria */}
       <section id="investment-criteria" className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-amber-600 font-semibold text-xs uppercase tracking-[0.2em] mb-3">What We Look For</p>
+          <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-3">What We Look For</p>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Investment Criteria</h2>
           <p className="text-lg text-gray-600 max-w-3xl mb-16 leading-relaxed">
             We make long term buy &amp; build equity investments in durable, growth-oriented field
@@ -192,13 +192,13 @@ export default function HomePage() {
                   { label: "Growth Equity", desc: "Entrepreneur raising equity to complete a business acquisition, seeking investors for mentorship and advisory support" },
                 ].map(({ label, desc }) => (
                   <li key={label} className="flex gap-3">
-                    <span className="text-amber-600 font-bold mt-0.5">&#8212;</span>
+                    <span className="text-[var(--cub-crimson)] font-bold mt-0.5">&#8212;</span>
                     <div><span className="font-semibold">{label}:</span> {desc}</div>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-amber-50 rounded-2xl p-8">
+            <div className="bg-[var(--cub-cream-50)] rounded-2xl p-8">
               <h3 className="text-lg font-bold text-gray-900 mb-5 uppercase tracking-wide">
                 Eligibility Checklist
               </h3>
@@ -211,7 +211,7 @@ export default function HomePage() {
                   "Desire of current ownership to fully or partially exit and/or capitalize the business for growth",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 items-start">
-                    <svg className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[var(--cub-crimson)] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>{item}</span>
@@ -226,7 +226,7 @@ export default function HomePage() {
       {/* Team */}
       <section id="team" className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-amber-600 font-semibold text-xs uppercase tracking-[0.2em] mb-3">The People</p>
+          <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-3">The People</p>
           <h2 className="text-4xl font-bold text-gray-900 mb-16">Team</h2>
           <div className="grid md:grid-cols-2 gap-10">
             {/* Nick */}
@@ -241,7 +241,7 @@ export default function HomePage() {
                 />
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">Nick Haschka</h3>
-                  <p className="text-amber-600 font-medium">Partner</p>
+                  <p className="text-[var(--cub-crimson)] font-medium">Partner</p>
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed mb-6">
@@ -280,7 +280,7 @@ export default function HomePage() {
                 />
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">Anupam Sharma</h3>
-                  <p className="text-amber-600 font-medium">Partner</p>
+                  <p className="text-[var(--cub-crimson)] font-medium">Partner</p>
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed mb-6">
@@ -303,25 +303,25 @@ export default function HomePage() {
       {/* How Can We Help */}
       <section id="how-we-help" className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-amber-600 font-semibold text-xs uppercase tracking-[0.2em] mb-3">Work With Us</p>
+          <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-3">Work With Us</p>
           <h2 className="text-4xl font-bold text-gray-900 mb-16">How can we help you?</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="group border border-gray-200 rounded-2xl p-8 hover:border-amber-300 hover:shadow-md transition-all">
-              <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center mb-5">
-                <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group border border-gray-200 rounded-2xl p-8 hover:border-[var(--cub-crimson)] hover:shadow-md transition-all">
+              <div className="w-10 h-10 rounded-xl bg-[var(--cub-crimson-50)] flex items-center justify-center mb-5">
+                <svg className="w-5 h-5 text-[var(--cub-crimson)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Planning to buy a business?</h3>
               <ul className="space-y-3 text-sm">
-                <li><Link href="/entrepreneurs" className="text-amber-600 hover:text-amber-700 font-semibold flex items-center gap-1">For Entrepreneurs <span>&rarr;</span></Link></li>
+                <li><Link href="/entrepreneurs" className="text-[var(--cub-crimson)] hover:text-[var(--cub-crimson-700)] font-semibold flex items-center gap-1">For Entrepreneurs <span>&rarr;</span></Link></li>
                 <li><Link href="/contact" className="text-gray-600 hover:text-gray-900 font-medium">Raising equity?</Link></li>
                 <li><Link href="/debt" className="text-gray-600 hover:text-gray-900 font-medium">Raising debt?</Link></li>
               </ul>
             </div>
-            <div className="group border border-gray-200 rounded-2xl p-8 hover:border-amber-300 hover:shadow-md transition-all">
-              <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center mb-5">
-                <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group border border-gray-200 rounded-2xl p-8 hover:border-[var(--cub-crimson)] hover:shadow-md transition-all">
+              <div className="w-10 h-10 rounded-xl bg-[var(--cub-crimson-50)] flex items-center justify-center mb-5">
+                <svg className="w-5 h-5 text-[var(--cub-crimson)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
@@ -329,18 +329,18 @@ export default function HomePage() {
               <ul className="space-y-3 text-sm">
                 <li><Link href="/contact" className="text-gray-600 hover:text-gray-900 font-medium">Looking to sell?</Link></li>
                 <li><Link href="/contact" className="text-gray-600 hover:text-gray-900 font-medium">Looking for an operating partner?</Link></li>
-                <li><a href="https://operators.mn.co/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 font-semibold flex items-center gap-1">Join our community <span>&rarr;</span></a></li>
+                <li><a href="https://operators.mn.co/" target="_blank" rel="noopener noreferrer" className="text-[var(--cub-crimson)] hover:text-[var(--cub-crimson-700)] font-semibold flex items-center gap-1">Join our community <span>&rarr;</span></a></li>
               </ul>
             </div>
-            <div className="group border border-gray-200 rounded-2xl p-8 hover:border-amber-300 hover:shadow-md transition-all">
-              <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center mb-5">
-                <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group border border-gray-200 rounded-2xl p-8 hover:border-[var(--cub-crimson)] hover:shadow-md transition-all">
+              <div className="w-10 h-10 rounded-xl bg-[var(--cub-crimson-50)] flex items-center justify-center mb-5">
+                <svg className="w-5 h-5 text-[var(--cub-crimson)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Looking to invest in SMBs?</h3>
               <ul className="space-y-3 text-sm">
-                <li><Link href="/investors" className="text-amber-600 hover:text-amber-700 font-semibold flex items-center gap-1">For Investors <span>&rarr;</span></Link></li>
+                <li><Link href="/investors" className="text-[var(--cub-crimson)] hover:text-[var(--cub-crimson-700)] font-semibold flex items-center gap-1">For Investors <span>&rarr;</span></Link></li>
                 <li><Link href="/lp" className="text-gray-600 hover:text-gray-900 font-medium">Get deal flow</Link></li>
                 <li><Link href="/library" className="text-gray-600 hover:text-gray-900 font-medium">Read up first</Link></li>
               </ul>
@@ -352,7 +352,7 @@ export default function HomePage() {
       {/* Portfolio */}
       <section id="portfolio" className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-amber-600 font-semibold text-xs uppercase tracking-[0.2em] mb-3">Our Companies</p>
+          <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-3">Our Companies</p>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Portfolio</h2>
           <p className="text-gray-500 mb-12">Companies we have invested in and partnered with.</p>
 
@@ -375,7 +375,7 @@ export default function HomePage() {
                     <h4 className="font-bold text-gray-900">{company.name}</h4>
                     {company.url && (
                       <a href={company.url} target="_blank" rel="noopener noreferrer"
-                        className="text-amber-600 hover:text-amber-700" aria-label={`Visit ${company.name}`}>
+                        className="text-[var(--cub-crimson)] hover:text-[var(--cub-crimson-700)]" aria-label={`Visit ${company.name}`}>
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
@@ -430,7 +430,7 @@ export default function HomePage() {
                 />
               </div>
               <div>
-                <p className="text-amber-600 font-semibold text-sm uppercase tracking-widest mb-2">
+                <p className="text-[var(--cub-crimson)] font-semibold text-sm uppercase tracking-widest mb-2">
                   Situation: Retirement Buyout
                 </p>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -449,7 +449,7 @@ export default function HomePage() {
                   </p>
                   <p className="text-sm">
                     Just here to learn?{" "}
-                    <Link href="/library" className="text-amber-600 hover:underline font-medium">
+                    <Link href="/library" className="text-[var(--cub-crimson)] hover:underline font-medium">
                       Read our writings or listen to podcast episodes on our library page.
                     </Link>
                   </p>
@@ -462,7 +462,7 @@ export default function HomePage() {
             {/* Partnership Buy-In */}
             <div className="grid md:grid-cols-2 gap-12 items-start">
               <div className="order-2 md:order-1">
-                <p className="text-amber-600 font-semibold text-sm uppercase tracking-widest mb-2">
+                <p className="text-[var(--cub-crimson)] font-semibold text-sm uppercase tracking-widest mb-2">
                   Situation: Partnership Buy-In
                 </p>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -505,7 +505,7 @@ export default function HomePage() {
                 />
               </div>
               <div>
-                <p className="text-amber-600 font-semibold text-sm uppercase tracking-widest mb-2">
+                <p className="text-[var(--cub-crimson)] font-semibold text-sm uppercase tracking-widest mb-2">
                   Situation: LP Investor
                 </p>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -522,7 +522,7 @@ export default function HomePage() {
                     compounding growth machine.
                   </p>
                   <p className="text-sm">
-                    <Link href="/library" className="text-amber-600 hover:underline font-medium">
+                    <Link href="/library" className="text-[var(--cub-crimson)] hover:underline font-medium">
                       Check out our library
                     </Link>{" "}
                     for loads of resources about our experience, values, insights, and tactics.
@@ -535,7 +535,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gray-900 text-white">
+      <section className="py-24 bg-[var(--cub-navy)] text-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-4">Let&apos;s Talk</h2>
           <p className="text-gray-300 text-lg mb-10 leading-relaxed">
@@ -544,7 +544,7 @@ export default function HomePage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-amber-600 text-white font-semibold px-10 py-5 rounded-lg text-lg hover:bg-amber-700 transition-colors"
+            className="inline-block bg-[var(--cub-crimson)] text-white font-semibold px-10 py-5 rounded-lg text-lg hover:bg-[var(--cub-crimson-700)] transition-colors"
           >
             Great, Let&apos;s Talk!
           </Link>

@@ -11,7 +11,7 @@ export default function EntrepreneursPage() {
     <div className="max-w-6xl mx-auto px-6 py-20">
       {/* Header */}
       <div className="max-w-3xl mb-20">
-        <p className="text-amber-600 font-semibold text-sm uppercase tracking-widest mb-3">
+        <p className="text-[var(--cub-crimson)] font-semibold text-sm uppercase tracking-widest mb-3">
           For Entrepreneurs
         </p>
         <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -64,7 +64,7 @@ export default function EntrepreneursPage() {
               "Raising LP equity to complement their own capital (SBA, seller financing, etc.)",
             ].map((item) => (
               <li key={item} className="flex gap-3 items-start text-gray-700">
-                <svg className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-[var(--cub-crimson)] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
                 <span>{item}</span>
@@ -108,7 +108,7 @@ export default function EntrepreneursPage() {
         <div className="mt-8">
           <Link
             href="/library"
-            className="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-2"
+            className="text-[var(--cub-crimson)]400 hover:text-[var(--cub-crimson)]300 font-semibold flex items-center gap-2"
           >
             Read our writings &amp; listen to podcasts
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -126,7 +126,7 @@ export default function EntrepreneursPage() {
         </p>
         <Link
           href="/contact"
-          className="inline-block bg-amber-600 text-white font-semibold px-10 py-4 rounded-lg text-lg hover:bg-amber-700 transition-colors"
+          className="inline-block bg-[var(--cub-crimson)] text-white font-semibold px-10 py-4 rounded-lg text-lg hover:bg-[var(--cub-crimson-700)] transition-colors"
         >
           Get in Touch
         </Link>

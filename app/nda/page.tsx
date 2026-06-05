@@ -9,7 +9,7 @@ export default function NdaPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-20">
       <div className="text-center mb-10">
-        <p className="text-amber-600 font-semibold text-sm uppercase tracking-widest mb-3">
+        <p className="text-[var(--cub-crimson)] font-semibold text-sm uppercase tracking-widest mb-3">
           Confidentiality
         </p>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">NDA</h1>

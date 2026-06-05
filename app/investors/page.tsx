@@ -11,7 +11,7 @@ export default function InvestorsPage() {
     <div className="max-w-6xl mx-auto px-6 py-20">
       {/* Header */}
       <div className="max-w-3xl mb-20">
-        <p className="text-amber-600 font-semibold text-sm uppercase tracking-widest mb-3">
+        <p className="text-[var(--cub-crimson)] font-semibold text-sm uppercase tracking-widest mb-3">
           For Investors
         </p>
         <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -26,7 +26,7 @@ export default function InvestorsPage() {
       </div>
 
       {/* Why SMBs */}
-      <div className="bg-amber-50 border border-amber-100 rounded-2xl p-10 mb-20">
+      <div className="bg-[var(--cub-cream-50)] border border-[var(--cub-cream-50)] rounded-2xl p-10 mb-20">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Small Businesses?</h2>
         <div className="grid md:grid-cols-2 gap-8 text-gray-700 leading-relaxed">
           <div>
@@ -98,8 +98,8 @@ export default function InvestorsPage() {
               },
             ].map((item) => (
               <li key={item.title} className="flex gap-4 items-start">
-                <div className="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center shrink-0 mt-0.5">
-                  <svg className="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-8 h-8 rounded-full bg-[var(--cub-cream-50)] flex items-center justify-center shrink-0 mt-0.5">
+                  <svg className="w-4 h-4 text-[var(--cub-crimson)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
@@ -122,7 +122,7 @@ export default function InvestorsPage() {
         </p>
         <Link
           href="/library"
-          className="inline-flex items-center gap-2 text-amber-600 font-semibold hover:text-amber-700"
+          className="inline-flex items-center gap-2 text-[var(--cub-crimson)] font-semibold hover:text-[var(--cub-crimson-700)]"
         >
           Explore the Library
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -139,7 +139,7 @@ export default function InvestorsPage() {
         </p>
         <Link
           href="/contact"
-          className="inline-block bg-amber-600 text-white font-semibold px-10 py-4 rounded-lg text-lg hover:bg-amber-700 transition-colors"
+          className="inline-block bg-[var(--cub-crimson)] text-white font-semibold px-10 py-4 rounded-lg text-lg hover:bg-[var(--cub-crimson-700)] transition-colors"
         >
           Get in Touch
         </Link>

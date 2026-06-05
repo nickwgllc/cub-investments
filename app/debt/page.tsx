@@ -34,7 +34,7 @@ export default function DebtPage() {
     <div className="max-w-4xl mx-auto px-6 py-20">
       {/* Hero */}
       <div className="max-w-3xl mb-16">
-        <p className="text-amber-600 font-semibold text-sm uppercase tracking-widest mb-3">
+        <p className="text-[var(--cub-crimson)] font-semibold text-sm uppercase tracking-widest mb-3">
           Debt &amp; Financing
         </p>
         <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -48,15 +48,15 @@ export default function DebtPage() {
         </p>
         <a
           href="#form"
-          className="inline-block bg-amber-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-amber-700 transition-colors"
+          className="inline-block bg-[var(--cub-crimson)] text-white font-semibold px-8 py-3 rounded-lg hover:bg-[var(--cub-crimson-700)] transition-colors"
         >
           Get Lender Recommendations
         </a>
       </div>
 
       {/* Problem */}
-      <div className="bg-amber-50 border border-amber-100 rounded-2xl p-10 mb-16">
-        <p className="text-amber-600 font-semibold text-sm uppercase tracking-widest mb-3">The Problem</p>
+      <div className="bg-[var(--cub-cream-50)] border border-[var(--cub-cream-50)] rounded-2xl p-10 mb-16">
+        <p className="text-[var(--cub-crimson)] font-semibold text-sm uppercase tracking-widest mb-3">The Problem</p>
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
           The small business loan market is the most challenging it has been in years
         </h2>
@@ -89,7 +89,7 @@ export default function DebtPage() {
         <div className="mt-8">
           <a
             href="#form"
-            className="inline-flex items-center gap-2 text-amber-600 font-semibold hover:text-amber-700"
+            className="inline-flex items-center gap-2 text-[var(--cub-crimson)] font-semibold hover:text-[var(--cub-crimson-700)]"
           >
             Get Lender Recommendations
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -129,15 +129,15 @@ export default function DebtPage() {
 
       <div className="border-t border-gray-100 pt-12">
         <div className="grid sm:grid-cols-3 gap-4">
-          <Link href="/" className="block p-5 border border-gray-200 rounded-xl hover:border-amber-300 transition-colors">
+          <Link href="/" className="block p-5 border border-gray-200 rounded-xl hover:border-[var(--cub-crimson)]300 transition-colors">
             <p className="font-semibold text-gray-900 mb-1">Home</p>
             <p className="text-sm text-gray-500">Back to Cub Investments</p>
           </Link>
-          <Link href="/entrepreneurs" className="block p-5 border border-gray-200 rounded-xl hover:border-amber-300 transition-colors">
+          <Link href="/entrepreneurs" className="block p-5 border border-gray-200 rounded-xl hover:border-[var(--cub-crimson)]300 transition-colors">
             <p className="font-semibold text-gray-900 mb-1">For Entrepreneurs</p>
             <p className="text-sm text-gray-500">Buying a business with our support</p>
           </Link>
-          <Link href="/contact" className="block p-5 border border-gray-200 rounded-xl hover:border-amber-300 transition-colors">
+          <Link href="/contact" className="block p-5 border border-gray-200 rounded-xl hover:border-[var(--cub-crimson)]300 transition-colors">
             <p className="font-semibold text-gray-900 mb-1">Contact</p>
             <p className="text-sm text-gray-500">Get in touch with Nick</p>
           </Link>

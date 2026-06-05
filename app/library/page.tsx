@@ -177,7 +177,7 @@ function LinkList({ items }: { items: { title: string; url: string; date?: strin
             href={item.url}
             target={item.url.startsWith("http") ? "_blank" : undefined}
             rel={item.url.startsWith("http") ? "noopener noreferrer" : undefined}
-            className="text-amber-700 hover:text-amber-800 hover:underline font-medium"
+            className="text-[var(--cub-crimson-700)] hover:text-[var(--cub-crimson-700)] hover:underline font-medium"
           >
             {item.title}
           </a>
@@ -227,7 +227,7 @@ export default function LibraryPage() {
             <div className="mt-4">
               <p className="text-sm text-gray-500 mb-2">
                 On{" "}
-                <a href="http://searchfunder.com" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:underline font-medium">
+                <a href="http://searchfunder.com" target="_blank" rel="noopener noreferrer" className="text-[var(--cub-crimson-700)] hover:underline font-medium">
                   Searchfunder
                 </a>{" "}
                 (account required):
@@ -239,7 +239,7 @@ export default function LibraryPage() {
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-amber-700 hover:text-amber-800 hover:underline font-medium text-sm"
+                      className="text-[var(--cub-crimson-700)] hover:text-[var(--cub-crimson-700)] hover:underline font-medium text-sm"
                     >
                       {item.title}
                     </a>
@@ -253,12 +253,12 @@ export default function LibraryPage() {
           <Section title="Social Media">
             <ul className="space-y-2 text-gray-700">
               <li>
-                <a href="https://twitter.com/NickHaschka" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:underline font-medium">
+                <a href="https://twitter.com/NickHaschka" target="_blank" rel="noopener noreferrer" className="text-[var(--cub-crimson-700)] hover:underline font-medium">
                   Follow Nick Haschka on Twitter
                 </a>
               </li>
               <li>
-                <a href="https://www.linktr.ee/NickHaschka" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:underline font-medium">
+                <a href="https://www.linktr.ee/NickHaschka" target="_blank" rel="noopener noreferrer" className="text-[var(--cub-crimson-700)] hover:underline font-medium">
                   Nick Haschka on Linktr.ee
                 </a>
               </li>
@@ -268,7 +268,7 @@ export default function LibraryPage() {
           <Section title="Press">
             <ul className="space-y-2">
               <li>
-                <a href="https://www.apnews.com/4a8e96a6b5394693806e732b3d22b354" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:underline font-medium">
+                <a href="https://www.apnews.com/4a8e96a6b5394693806e732b3d22b354" target="_blank" rel="noopener noreferrer" className="text-[var(--cub-crimson-700)] hover:underline font-medium">
                   TWG in the Associated Press
                 </a>{" "}
                 <span className="text-gray-500 text-sm">(Feb 2019)</span>

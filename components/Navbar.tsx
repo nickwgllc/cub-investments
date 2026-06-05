@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -20,17 +21,19 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-      {/* Amber top accent bar */}
-      <div className="h-0.5 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600" />
+      {/* Crimson brand accent bar */}
+      <div className="h-0.5" style={{ background: "linear-gradient(to right, var(--cub-crimson-700), var(--cub-crimson), var(--cub-crimson-700))" }} />
 
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-7 h-7 bg-amber-600 rounded-md flex items-center justify-center shrink-0 group-hover:bg-amber-700 transition-colors">
-            <span className="text-white font-bold text-sm leading-none">C</span>
-          </div>
-          <span className="text-lg font-bold text-gray-900 tracking-tight">
-            Cub Investments
-          </span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/logo-horizontal.png"
+            alt="Cub Investments"
+            width={220}
+            height={32}
+            className="h-7 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -41,7 +44,7 @@ export default function Navbar() {
               href={href}
               className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                 isActive(href)
-                  ? "text-amber-700 bg-amber-50"
+                  ? "text-[var(--cub-crimson)] bg-[var(--cub-crimson-50)]"
                   : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
               }`}
             >
@@ -51,7 +54,10 @@ export default function Navbar() {
           <div className="ml-4">
             <Link
               href="/contact"
-              className="bg-amber-600 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-amber-700 transition-colors shadow-sm"
+              className="text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors shadow-sm"
+              style={{ background: "var(--cub-crimson)" }}
+              onMouseOver={(e) => (e.currentTarget.style.background = "var(--cub-crimson-700)")}
+              onMouseOut={(e) => (e.currentTarget.style.background = "var(--cub-crimson)")}
             >
               Let&apos;s Talk
             </Link>
@@ -84,7 +90,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive(href)
-                  ? "text-amber-700 bg-amber-50"
+                  ? "bg-[var(--cub-crimson-50)] text-[var(--cub-crimson)]"
                   : "text-gray-700 hover:bg-gray-50"
               }`}
             >
@@ -95,7 +101,8 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setMenuOpen(false)}
-              className="block bg-amber-600 text-white text-sm font-semibold px-4 py-2.5 rounded-lg text-center hover:bg-amber-700 transition-colors"
+              className="block text-white text-sm font-semibold px-4 py-2.5 rounded-lg text-center transition-colors"
+              style={{ background: "var(--cub-crimson)" }}
             >
               Let&apos;s Talk
             </Link>

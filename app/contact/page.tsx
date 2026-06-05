@@ -16,7 +16,7 @@ export default function ContactPage() {
       </p>
 
       <div className="grid md:grid-cols-2 gap-8 mb-12">
-        <div className="bg-amber-50 border border-amber-100 rounded-2xl p-8">
+        <div className="bg-[var(--cub-cream-50)] border border-[var(--cub-cream-50)] rounded-2xl p-8">
           <h2 className="text-xl font-bold text-gray-900 mb-3">Business Owners</h2>
           <p className="text-gray-600 text-sm leading-relaxed">
             Looking to sell your business or find an operating partner? We&apos;d love to hear about
@@ -54,21 +54,21 @@ export default function ContactPage() {
         <div className="grid sm:grid-cols-3 gap-4">
           <Link
             href="/entrepreneurs"
-            className="block p-5 border border-gray-200 rounded-xl hover:border-amber-300 transition-colors"
+            className="block p-5 border border-gray-200 rounded-xl hover:border-[var(--cub-crimson)]300 transition-colors"
           >
             <p className="font-semibold text-gray-900 mb-1">For Entrepreneurs</p>
             <p className="text-sm text-gray-500">Buying a business with our support</p>
           </Link>
           <Link
             href="/investors"
-            className="block p-5 border border-gray-200 rounded-xl hover:border-amber-300 transition-colors"
+            className="block p-5 border border-gray-200 rounded-xl hover:border-[var(--cub-crimson)]300 transition-colors"
           >
             <p className="font-semibold text-gray-900 mb-1">For Investors</p>
             <p className="text-sm text-gray-500">Get SMB deal flow and co-invest</p>
           </Link>
           <Link
             href="/library"
-            className="block p-5 border border-gray-200 rounded-xl hover:border-amber-300 transition-colors"
+            className="block p-5 border border-gray-200 rounded-xl hover:border-[var(--cub-crimson)]300 transition-colors"
           >
             <p className="font-semibold text-gray-900 mb-1">Library</p>
             <p className="text-sm text-gray-500">Podcasts, writings &amp; resources</p>
