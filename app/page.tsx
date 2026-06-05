@@ -125,8 +125,8 @@ const portfolioExited = [
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative bg-[var(--cub-navy-900)] text-white min-h-[88vh] flex items-center overflow-hidden">
+      {/* ── Hero ─────────────────────────────────────────────────── */}
+      <section className="relative bg-[var(--cub-navy-900)] text-white min-h-[92vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/hero-banner.png"
@@ -135,87 +135,99 @@ export default function HomePage() {
             className="object-cover object-center opacity-40"
             priority
           />
-          {/* gradient overlay: lighter to let the image show */}
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-950/40 via-gray-950/20 to-gray-950/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-950/50 via-gray-950/20 to-gray-950/70" />
         </div>
+
         <div className="relative max-w-6xl mx-auto px-6 py-32 w-full">
-          <p className="text-[#e8a0a8] font-semibold text-xs uppercase tracking-[0.2em] mb-5">
-            Cub Investments · Since 2016
-          </p>
-          <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] mb-6 max-w-3xl">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3 mb-8">
+            <span className="block w-8 h-px bg-[var(--cub-crimson)]" />
+            <p className="text-[#e8a0a8] font-semibold text-xs uppercase tracking-[0.25em]">
+              Cub Investments · Since 2016
+            </p>
+          </div>
+
+          {/* Headline */}
+          <h1 className="font-display text-6xl md:text-8xl font-bold leading-[1.0] mb-8 max-w-3xl">
             Pride of<br />
-            <span className="text-[#e8a0a8]">Ownership</span>
+            <em className="not-italic text-[#e8a0a8]">Ownership</em>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mb-12 leading-relaxed">
+
+          <p className="text-xl md:text-2xl text-gray-300 max-w-xl mb-12 leading-relaxed font-light">
             We acquire and operate small field-services businesses — giving great companies
             a new generation of leadership, capital, and growth.
           </p>
+
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
-              className="bg-[var(--cub-crimson)] text-white font-semibold px-8 py-4 rounded-lg hover:bg-[var(--cub-crimson-700)] transition-colors text-center shadow-lg shadow-[var(--cub-crimson)]/30"
+              className="bg-[var(--cub-crimson)] text-white font-semibold px-8 py-4 rounded-lg hover:bg-[var(--cub-crimson-700)] transition-colors text-center shadow-lg shadow-black/30"
             >
               Let&apos;s Talk
             </Link>
             <Link
               href="#investment-criteria"
-              className="border border-white/40 text-white font-semibold px-8 py-4 rounded-lg hover:border-white/60 hover:text-[#e8a0a8] transition-colors text-center backdrop-blur-sm"
+              className="border border-white/30 text-white font-semibold px-8 py-4 rounded-lg hover:border-white/60 hover:bg-white/5 transition-all text-center"
             >
               Our Criteria
             </Link>
           </div>
 
           {/* Stats strip */}
-          <div className="mt-20 flex flex-wrap gap-x-12 gap-y-6">
+          <div className="mt-20 flex flex-wrap divide-x divide-white/15">
             {[
               { value: "12+", label: "Portfolio companies" },
               { value: "2016", label: "Year founded" },
               { value: "$2M–$20M", label: "Target revenue" },
               { value: "US-based", label: "Field services focus" },
-            ].map(({ value, label }) => (
-              <div key={label}>
-                <p className="text-2xl font-bold text-white">{value}</p>
-                <p className="text-sm text-gray-400">{label}</p>
+            ].map(({ value, label }, i) => (
+              <div key={label} className={`${i === 0 ? "pr-10" : "px-10"} py-2`}>
+                <p className="font-display text-3xl font-bold text-white">{value}</p>
+                <p className="text-xs text-gray-400 mt-1 uppercase tracking-wider">{label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Investment Criteria */}
-      <section id="investment-criteria" className="py-24 bg-white">
+      {/* ── Investment Criteria ───────────────────────────────────── */}
+      <section id="investment-criteria" className="py-28 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-3">What We Look For</p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Investment Criteria</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mb-16 leading-relaxed">
-            We make long term buy &amp; build equity investments in durable, growth-oriented field
-            services companies. We maintain a tight network of entrepreneurial operators and investors.
-            We customize our approach and help drive our companies toward true excellence so we can be
-            Proud to Own.
-          </p>
-          <div className="grid md:grid-cols-2 gap-10">
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <h3 className="text-lg font-bold text-gray-900 mb-5 uppercase tracking-wide">
-                Typical Situations
-              </h3>
-              <ul className="space-y-4 text-gray-700">
+          <div className="max-w-2xl mb-16">
+            <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-4">What We Look For</p>
+            <h2 className="font-display text-5xl font-bold text-gray-900 mb-6 leading-tight">Investment Criteria</h2>
+            <p className="text-lg text-gray-500 leading-relaxed">
+              We make long-term buy &amp; build equity investments in durable, growth-oriented field
+              services companies — customizing our approach to drive each company toward true excellence.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Typical Situations */}
+            <div className="relative bg-[var(--cub-navy)] text-white rounded-2xl p-10 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-[var(--cub-crimson)]" />
+              <h3 className="font-display text-2xl font-bold mb-8">Typical Situations</h3>
+              <ul className="space-y-6">
                 {[
                   { label: "Buy-Out", desc: "Majority owner-operator needs a successor to facilitate owner retirement and exit" },
-                  { label: "Buy-In", desc: "Owner-operator needs a business partner to help professionalize the business to grow to the next level, requiring investment capital and new talent" },
+                  { label: "Buy-In", desc: "Owner-operator needs a business partner to help professionalize the business and grow to the next level" },
                   { label: "Growth Equity", desc: "Entrepreneur raising equity to complete a business acquisition, seeking investors for mentorship and advisory support" },
                 ].map(({ label, desc }) => (
-                  <li key={label} className="flex gap-3">
-                    <span className="text-[var(--cub-crimson)] font-bold mt-0.5">&#8212;</span>
-                    <div><span className="font-semibold">{label}:</span> {desc}</div>
+                  <li key={label} className="flex gap-4">
+                    <span className="text-[var(--cub-crimson)] font-bold text-lg leading-tight mt-0.5">—</span>
+                    <div>
+                      <span className="font-bold text-white">{label}:</span>{" "}
+                      <span className="text-gray-300">{desc}</span>
+                    </div>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-[var(--cub-cream-50)] rounded-2xl p-8">
-              <h3 className="text-lg font-bold text-gray-900 mb-5 uppercase tracking-wide">
-                Eligibility Checklist
-              </h3>
-              <ul className="space-y-3 text-gray-700">
+
+            {/* Checklist */}
+            <div className="bg-[var(--cub-cream-50)] rounded-2xl p-10 border border-[var(--cub-cream)]">
+              <h3 className="font-display text-2xl font-bold text-gray-900 mb-8">Eligibility Checklist</h3>
+              <ul className="space-y-4">
                 {[
                   "US-based private company",
                   "10+ year profitable operating history",
@@ -224,10 +236,12 @@ export default function HomePage() {
                   "Desire of current ownership to fully or partially exit and/or capitalize the business for growth",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 items-start">
-                    <svg className="w-5 h-5 text-[var(--cub-crimson)] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>{item}</span>
+                    <div className="w-5 h-5 rounded-full bg-[var(--cub-crimson)] flex items-center justify-center shrink-0 mt-0.5">
+                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span className="text-gray-700 leading-snug">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -236,55 +250,60 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Team */}
-      <section id="team" className="py-24 bg-gray-50">
+      {/* ── Team ─────────────────────────────────────────────────── */}
+      <section id="team" className="py-28 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-3">The People</p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-16">Team</h2>
+          <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-4">The People</p>
+          <h2 className="font-display text-5xl font-bold text-gray-900 mb-16">Team</h2>
           <TeamBios />
         </div>
       </section>
 
-      {/* How Can We Help */}
-      <section id="how-we-help" className="py-24 bg-white">
+      {/* ── How Can We Help ───────────────────────────────────────── */}
+      <section id="how-we-help" className="py-28 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-3">Work With Us</p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-16">How can we help you?</h2>
+          <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-4">Work With Us</p>
+          <h2 className="font-display text-5xl font-bold text-gray-900 mb-16">How can we help you?</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="group border border-gray-200 rounded-2xl p-8 hover:border-[var(--cub-crimson)] hover:shadow-md transition-all">
-              <div className="w-10 h-10 rounded-xl bg-[var(--cub-crimson-50)] flex items-center justify-center mb-5">
-                <svg className="w-5 h-5 text-[var(--cub-crimson)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {/* Card 1 — featured */}
+            <div className="bg-[var(--cub-crimson)] text-white rounded-2xl p-8 flex flex-col">
+              <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center mb-6">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Planning to buy a business?</h3>
-              <ul className="space-y-3 text-sm">
-                <li><Link href="/entrepreneurs" className="text-[var(--cub-crimson)] hover:text-[var(--cub-crimson-700)] font-semibold flex items-center gap-1">For Entrepreneurs <span>&rarr;</span></Link></li>
-                <li><Link href="/contact" className="text-gray-600 hover:text-gray-900 font-medium">Raising equity?</Link></li>
-                <li><Link href="/debt" className="text-gray-600 hover:text-gray-900 font-medium">Raising debt?</Link></li>
+              <h3 className="font-display text-xl font-bold mb-4">Planning to buy a business?</h3>
+              <ul className="space-y-3 text-sm mt-auto">
+                <li><Link href="/entrepreneurs" className="text-white/90 hover:text-white font-semibold flex items-center gap-1">For Entrepreneurs <span>&rarr;</span></Link></li>
+                <li><Link href="/contact" className="text-white/70 hover:text-white font-medium">Raising equity?</Link></li>
+                <li><Link href="/debt" className="text-white/70 hover:text-white font-medium">Raising debt?</Link></li>
               </ul>
             </div>
-            <div className="group border border-gray-200 rounded-2xl p-8 hover:border-[var(--cub-crimson)] hover:shadow-md transition-all">
-              <div className="w-10 h-10 rounded-xl bg-[var(--cub-crimson-50)] flex items-center justify-center mb-5">
+
+            {/* Card 2 */}
+            <div className="group border border-gray-200 rounded-2xl p-8 hover:border-[var(--cub-crimson)]/40 hover:shadow-lg transition-all flex flex-col">
+              <div className="w-10 h-10 rounded-xl bg-[var(--cub-crimson-50)] flex items-center justify-center mb-6">
                 <svg className="w-5 h-5 text-[var(--cub-crimson)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Already own a business?</h3>
-              <ul className="space-y-3 text-sm">
+              <h3 className="font-display text-xl font-bold text-gray-900 mb-4">Already own a business?</h3>
+              <ul className="space-y-3 text-sm mt-auto">
                 <li><Link href="/contact" className="text-gray-600 hover:text-gray-900 font-medium">Looking to sell?</Link></li>
                 <li><Link href="/contact" className="text-gray-600 hover:text-gray-900 font-medium">Looking for an operating partner?</Link></li>
                 <li><a href="https://operators.mn.co/" target="_blank" rel="noopener noreferrer" className="text-[var(--cub-crimson)] hover:text-[var(--cub-crimson-700)] font-semibold flex items-center gap-1">Join our community <span>&rarr;</span></a></li>
               </ul>
             </div>
-            <div className="group border border-gray-200 rounded-2xl p-8 hover:border-[var(--cub-crimson)] hover:shadow-md transition-all">
-              <div className="w-10 h-10 rounded-xl bg-[var(--cub-crimson-50)] flex items-center justify-center mb-5">
+
+            {/* Card 3 */}
+            <div className="group border border-gray-200 rounded-2xl p-8 hover:border-[var(--cub-crimson)]/40 hover:shadow-lg transition-all flex flex-col">
+              <div className="w-10 h-10 rounded-xl bg-[var(--cub-crimson-50)] flex items-center justify-center mb-6">
                 <svg className="w-5 h-5 text-[var(--cub-crimson)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Looking to invest in SMBs?</h3>
-              <ul className="space-y-3 text-sm">
+              <h3 className="font-display text-xl font-bold text-gray-900 mb-4">Looking to invest in SMBs?</h3>
+              <ul className="space-y-3 text-sm mt-auto">
                 <li><Link href="/investors" className="text-[var(--cub-crimson)] hover:text-[var(--cub-crimson-700)] font-semibold flex items-center gap-1">For Investors <span>&rarr;</span></Link></li>
                 <li><Link href="/lp" className="text-gray-600 hover:text-gray-900 font-medium">Get deal flow</Link></li>
                 <li><Link href="/library" className="text-gray-600 hover:text-gray-900 font-medium">Read up first</Link></li>
@@ -294,18 +313,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Portfolio */}
-      <section id="portfolio" className="py-24 bg-gray-50">
+      {/* ── Portfolio ─────────────────────────────────────────────── */}
+      <section id="portfolio" className="py-28 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-3">Our Companies</p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Portfolio</h2>
-          <p className="text-gray-500 mb-12">Companies we have invested in and partnered with.</p>
+          <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-4">Our Companies</p>
+          <h2 className="font-display text-5xl font-bold text-gray-900 mb-4">Portfolio</h2>
+          <p className="text-gray-500 mb-14">Companies we have invested in and partnered with.</p>
 
-          <h3 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6">Active</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6 pb-3 border-b border-gray-200">Active</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
             {portfolioActive.map((company) => (
-              <div key={company.name} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-40 bg-gray-100 flex items-center justify-center p-4">
+              <div key={company.name} className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-[var(--cub-crimson)]/25 hover:shadow-lg transition-all group">
+                <div className="h-36 bg-[var(--cub-cream-50)] flex items-center justify-center p-5">
                   <div className="relative w-full h-full">
                     <Image
                       src={company.img}
@@ -315,7 +334,7 @@ export default function HomePage() {
                     />
                   </div>
                 </div>
-                <div className="p-5">
+                <div className="p-5 border-t border-gray-100">
                   <h4 className="font-bold text-gray-900 mb-1">{company.name}</h4>
                   {company.url && (
                     <a href={company.url} target="_blank" rel="noopener noreferrer"
@@ -323,29 +342,29 @@ export default function HomePage() {
                       {company.urlLabel}
                     </a>
                   )}
-                  <p className="text-sm text-gray-600 leading-relaxed">{company.description}</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">{company.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <h3 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6">Inactive / Exited</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6 pb-3 border-b border-gray-200">Exited</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {portfolioExited.map((company) => (
-              <div key={company.name} className="bg-white rounded-2xl overflow-hidden shadow-sm opacity-70">
-                <div className="h-32 bg-gray-50 flex items-center justify-center p-4">
+              <div key={company.name} className="bg-white rounded-2xl overflow-hidden border border-gray-100 opacity-60">
+                <div className="h-28 bg-gray-50 flex items-center justify-center p-5">
                   <div className="relative w-full h-full">
                     <Image
                       src={company.img}
                       alt={company.name}
                       fill
-                      className="object-contain"
+                      className="object-contain grayscale"
                     />
                   </div>
                 </div>
-                <div className="p-5">
-                  <h4 className="font-bold text-gray-700 mb-1">{company.name}</h4>
-                  <p className="text-sm text-gray-500">{company.description}</p>
+                <div className="p-5 border-t border-gray-100">
+                  <h4 className="font-bold text-gray-600 mb-1">{company.name}</h4>
+                  <p className="text-sm text-gray-400">{company.description}</p>
                 </div>
               </div>
             ))}
@@ -353,27 +372,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Deal Types */}
-      <section id="deal-types" className="py-24 bg-white">
+      {/* ── Deal Types ────────────────────────────────────────────── */}
+      <section id="deal-types" className="py-28 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 mb-16">Deal Types</h2>
+          <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-4">How We Invest</p>
+          <h2 className="font-display text-5xl font-bold text-gray-900 mb-20">Deal Types</h2>
 
-          <div className="space-y-20">
-            {/* Retirement Buyout */}
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
-                <Image
-                  src="/images/deal-retirement-buyout.jpg"
-                  alt="Retirement buyout"
-                  fill
-                  className="object-cover object-top"
-                />
+          <div className="space-y-24">
+            {/* 01 — Retirement Buyout */}
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl">
+                <Image src="/images/deal-retirement-buyout.jpg" alt="Retirement buyout" fill className="object-cover object-top" />
               </div>
               <div>
-                <p className="text-[var(--cub-crimson)] font-semibold text-sm uppercase tracking-widest mb-2">
-                  Situation: Retirement Buyout
+                <p className="font-display text-7xl font-bold text-gray-100 leading-none mb-4 select-none">01</p>
+                <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-3">
+                  Retirement Buyout
                 </p>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="font-display text-3xl font-bold text-gray-900 mb-5 leading-snug">
                   We invest for the next generation, giving small businesses a new lease on life.
                 </h3>
                 <div className="text-gray-600 space-y-4 leading-relaxed">
@@ -387,25 +403,23 @@ export default function HomePage() {
                     pride, allow employees to continue on, and bring new capital, talent, and energy for the
                     business to grow for another generation.
                   </p>
-                  <p className="text-sm">
-                    Just here to learn?{" "}
-                    <Link href="/library" className="text-[var(--cub-crimson)] hover:underline font-medium">
-                      Read our writings or listen to podcast episodes on our library page.
-                    </Link>
-                  </p>
                 </div>
+                <Link href="/library" className="inline-flex items-center gap-2 mt-6 text-[var(--cub-crimson)] font-semibold hover:text-[var(--cub-crimson-700)] text-sm">
+                  Read our writings <span>&rarr;</span>
+                </Link>
               </div>
             </div>
 
-            <hr className="border-gray-100" />
+            <div className="border-t border-gray-100" />
 
-            {/* Partnership Buy-In */}
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* 02 — Partnership Buy-In */}
+            <div className="grid md:grid-cols-2 gap-16 items-center">
               <div className="order-2 md:order-1">
-                <p className="text-[var(--cub-crimson)] font-semibold text-sm uppercase tracking-widest mb-2">
-                  Situation: Partnership Buy-In
+                <p className="font-display text-7xl font-bold text-gray-100 leading-none mb-4 select-none">02</p>
+                <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-3">
+                  Partnership Buy-In
                 </p>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="font-display text-3xl font-bold text-gray-900 mb-5 leading-snug">
                   Already own a business and looking for a partner to help ignite growth?
                 </h3>
                 <div className="text-gray-600 space-y-4 leading-relaxed">
@@ -419,34 +433,28 @@ export default function HomePage() {
                     their business to the next level and elevate their leadership.
                   </p>
                 </div>
+                <Link href="/contact" className="inline-flex items-center gap-2 mt-6 text-[var(--cub-crimson)] font-semibold hover:text-[var(--cub-crimson-700)] text-sm">
+                  Let&apos;s talk <span>&rarr;</span>
+                </Link>
               </div>
-              <div className="order-1 md:order-2 relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
-                <Image
-                  src="/images/deal-partnership-buyin.jpg"
-                  alt="Partnership buy-in"
-                  fill
-                  className="object-cover object-top"
-                />
+              <div className="order-1 md:order-2 relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl">
+                <Image src="/images/deal-partnership-buyin.jpg" alt="Partnership buy-in" fill className="object-cover object-top" />
               </div>
             </div>
 
-            <hr className="border-gray-100" />
+            <div className="border-t border-gray-100" />
 
-            {/* LP Investor */}
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
-                <Image
-                  src="/images/deal-lp-investor.jpg"
-                  alt="LP investor"
-                  fill
-                  className="object-cover object-top"
-                />
+            {/* 03 — LP Investor */}
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl">
+                <Image src="/images/deal-lp-investor.jpg" alt="LP investor" fill className="object-cover object-top" />
               </div>
               <div>
-                <p className="text-[var(--cub-crimson)] font-semibold text-sm uppercase tracking-widest mb-2">
-                  Situation: LP Investor
+                <p className="font-display text-7xl font-bold text-gray-100 leading-none mb-4 select-none">03</p>
+                <p className="text-[var(--cub-crimson)] font-semibold text-xs uppercase tracking-[0.2em] mb-3">
+                  LP Investor
                 </p>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="font-display text-3xl font-bold text-gray-900 mb-5 leading-snug">
                   Have a great acquisition opportunity, but need seasoned investors to help guide growth?
                 </h3>
                 <div className="text-gray-600 space-y-4 leading-relaxed">
@@ -459,32 +467,37 @@ export default function HomePage() {
                     capacity helping transform their acquired company into a durable, high-quality
                     compounding growth machine.
                   </p>
-                  <p className="text-sm">
-                    <Link href="/library" className="text-[var(--cub-crimson)] hover:underline font-medium">
-                      Check out our library
-                    </Link>{" "}
-                    for loads of resources about our experience, values, insights, and tactics.
-                  </p>
                 </div>
+                <Link href="/library" className="inline-flex items-center gap-2 mt-6 text-[var(--cub-crimson)] font-semibold hover:text-[var(--cub-crimson-700)] text-sm">
+                  Check out our library <span>&rarr;</span>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 bg-[var(--cub-navy)] text-white">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-4">Let&apos;s Talk</h2>
-          <p className="text-gray-300 text-lg mb-10 leading-relaxed">
-            Click below to fill out our contact form, then follow the prompts to book a meeting.
-            We look forward to talking with you!
+      {/* ── CTA ──────────────────────────────────────────────────── */}
+      <section className="py-32 bg-[var(--cub-navy)]">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <span className="block w-8 h-px bg-[var(--cub-crimson)]" />
+            <p className="text-[#e8a0a8] font-semibold text-xs uppercase tracking-[0.25em]">Get in Touch</p>
+            <span className="block w-8 h-px bg-[var(--cub-crimson)]" />
+          </div>
+          <h2 className="font-display text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Let&apos;s build something<br />
+            <em className="not-italic text-[#e8a0a8]">worth owning.</em>
+          </h2>
+          <p className="text-gray-400 text-lg mb-12 max-w-xl mx-auto leading-relaxed">
+            Fill out our contact form and follow the prompts to book a meeting.
+            We look forward to talking with you.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-[var(--cub-crimson)] text-white font-semibold px-10 py-5 rounded-lg text-lg hover:bg-[var(--cub-crimson-700)] transition-colors"
+            className="inline-block bg-[var(--cub-crimson)] text-white font-semibold px-12 py-5 rounded-lg text-lg hover:bg-[var(--cub-crimson-700)] transition-colors shadow-lg shadow-black/30"
           >
-            Great, Let&apos;s Talk!
+            Let&apos;s Talk
           </Link>
         </div>
       </section>

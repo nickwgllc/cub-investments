@@ -24,6 +24,9 @@
   --font-sans:  var(--font-geist-sans), system-ui, -apple-system, sans-serif;
 }
 
+/* Display / serif utility */
+.font-display { font-family: var(--font-serif); }
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 72px;
