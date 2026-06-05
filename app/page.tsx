@@ -367,7 +367,7 @@ export default function HomePage() {
                   alt="Retirement buyout"
                   width={1280}
                   height={922}
-                  className="w-full h-64 object-cover rounded-2xl"
+                  className="w-full h-64 object-cover object-top rounded-2xl"
                 />
               </div>
               <div>
@@ -427,7 +427,7 @@ export default function HomePage() {
                   alt="Partnership buy-in"
                   width={1280}
                   height={979}
-                  className="w-full h-64 object-cover rounded-2xl"
+                  className="w-full h-64 object-cover object-top rounded-2xl"
                 />
               </div>
             </div>
@@ -442,7 +442,7 @@ export default function HomePage() {
                   alt="LP investor"
                   width={1280}
                   height={935}
-                  className="w-full h-64 object-cover rounded-2xl"
+                  className="w-full h-64 object-cover object-top rounded-2xl"
                 />
               </div>
               <div>
