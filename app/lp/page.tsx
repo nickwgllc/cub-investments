@@ -20,15 +20,18 @@ export default function LpPage() {
         </p>
       </div>
 
-      <iframe
-        id="JotFormIFrame-212977344334056"
-        title="Get LP Deal Flow"
-        src="https://form.jotform.com/212977344334056"
-        allow="geolocation; microphone; camera"
-        allowFullScreen
-        className="w-full border-0 rounded-xl mb-16"
-        style={{ minHeight: "600px" }}
-      />
+      <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-white mb-16">
+        <div className="h-1" style={{ background: "linear-gradient(to right, var(--cub-crimson-700), var(--cub-crimson))" }} />
+        <iframe
+          id="JotFormIFrame-212977344334056"
+          title="Get LP Deal Flow"
+          src="https://form.jotform.com/212977344334056?transparentBackground=1"
+          allow="geolocation; microphone; camera"
+          allowFullScreen
+          className="w-full border-0"
+          style={{ minHeight: "600px" }}
+        />
+      </div>
 
       <div className="bg-gray-50 rounded-2xl p-8 mb-10">
         <h2 className="text-xl font-bold text-gray-900 mb-6">Where to Next?</h2>

@@ -116,15 +116,18 @@ export default function DebtPage() {
       <div id="form" className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-2">Let&apos;s Do It</h2>
         <p className="text-gray-600 mb-8">Fill out the form below to get lender recommendations.</p>
-        <iframe
-          id="JotFormIFrame-232770329609057"
-          title="Get Lender Recommendations"
-          src="https://form.jotform.com/232770329609057"
-          allow="geolocation; microphone; camera"
-          allowFullScreen
-          className="w-full border-0 rounded-xl"
-          style={{ minHeight: "700px" }}
-        />
+        <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-white">
+          <div className="h-1" style={{ background: "linear-gradient(to right, var(--cub-crimson-700), var(--cub-crimson))" }} />
+          <iframe
+            id="JotFormIFrame-232770329609057"
+            title="Get Lender Recommendations"
+            src="https://form.jotform.com/232770329609057?transparentBackground=1"
+            allow="geolocation; microphone; camera"
+            allowFullScreen
+            className="w-full border-0"
+            style={{ minHeight: "700px" }}
+          />
+        </div>
       </div>
 
       <div className="border-t border-gray-100 pt-12">

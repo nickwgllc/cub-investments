@@ -34,19 +34,22 @@ export default function ContactPage() {
 
       {/* JotForm embed */}
       <div className="mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Complete the Form Below</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">Complete the Form Below</h2>
         <p className="text-gray-500 mb-6 text-sm">
           Fill out the form and follow the prompts to book a meeting. We look forward to talking with you!
         </p>
-        <iframe
-          id="JotFormIFrame-222827316889166"
-          title="Contact Cub Investments"
-          src="https://form.jotform.com/222827316889166"
-          allow="geolocation; microphone; camera"
-          allowFullScreen
-          className="w-full border-0 rounded-xl"
-          style={{ minHeight: "700px" }}
-        />
+        <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-white">
+          <div className="h-1" style={{ background: "linear-gradient(to right, var(--cub-crimson-700), var(--cub-crimson))" }} />
+          <iframe
+            id="JotFormIFrame-222827316889166"
+            title="Contact Cub Investments"
+            src="https://form.jotform.com/222827316889166?transparentBackground=1"
+            allow="geolocation; microphone; camera"
+            allowFullScreen
+            className="w-full border-0"
+            style={{ minHeight: "700px" }}
+          />
+        </div>
       </div>
 
       <div className="border-t border-gray-100 pt-12">

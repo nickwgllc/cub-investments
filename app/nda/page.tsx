@@ -18,15 +18,18 @@ export default function NdaPage() {
         </p>
       </div>
 
-      <iframe
-        id="JotFormIFrame-212905940045048"
-        title="Cub Investments NDA"
-        src="https://form.jotform.com/212905940045048"
-        allow="geolocation; microphone; camera"
-        allowFullScreen
-        className="w-full border-0 rounded-xl"
-        style={{ minHeight: "700px" }}
-      />
+      <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-white">
+        <div className="h-1" style={{ background: "linear-gradient(to right, var(--cub-crimson-700), var(--cub-crimson))" }} />
+        <iframe
+          id="JotFormIFrame-212905940045048"
+          title="Cub Investments NDA"
+          src="https://form.jotform.com/212905940045048?transparentBackground=1"
+          allow="geolocation; microphone; camera"
+          allowFullScreen
+          className="w-full border-0"
+          style={{ minHeight: "700px" }}
+        />
+      </div>
     </div>
   );
 }
