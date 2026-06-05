@@ -146,7 +146,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="#investment-criteria"
-              className="border border-gray-600 text-gray-200 font-semibold px-8 py-4 rounded-lg hover:border-amber-500 hover:text-amber-300 transition-colors text-center"
+              className="border border-white/40 text-white font-semibold px-8 py-4 rounded-lg hover:border-amber-400 hover:text-amber-300 transition-colors text-center backdrop-blur-sm"
             >
               Our Criteria
             </Link>
